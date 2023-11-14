@@ -74,7 +74,7 @@ const loader = new OBJLoader();
 // load a resource
 loader.load(
   // resource URL
-  "asset/adjusted_model.obj",
+  "asset/SaMo_topo_8_color_scaled.obj",
   // called when resource is loaded
   function (object) {
     scene.add(object);
