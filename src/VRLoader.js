@@ -1,8 +1,6 @@
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
-import { PLYLoader } from "three/examples/jsm/loaders/PLYLoader";
 import Stats from "three/examples/jsm/libs/stats.module";
-import { PCDLoader } from "three/addons/loaders/PCDLoader.js";
 import { OBJLoader } from "three/addons/loaders/OBJLoader.js";
 import "./style.css";
 import { VRButton } from 'three/addons/webxr/VRButton.js';
