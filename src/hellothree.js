@@ -5,6 +5,7 @@ import Stats from "three/examples/jsm/libs/stats.module";
 import { PCDLoader } from "three/addons/loaders/PCDLoader.js";
 import { OBJLoader } from "three/addons/loaders/OBJLoader.js";
 import "./style.css";
+import { VRButton } from 'three/addons/webxr/VRButton.js';
 
 // import { PointCloudOctree, Potree } from "/three-loader";
 const width = window.innerWidth;
@@ -71,12 +72,27 @@ controls.enableDamping = true;
 // instantiate a loader
 const loader = new OBJLoader();
 
+
+const material = new THREE.MeshPhysicalMaterial({
+  metalness: 0,
+  roughness: 0,
+  transparent: true,
+  transmission: 1.0,
+  side: THREE.DoubleSide,
+  clearcoat: 1.0,
+  clearcoatRoughness: 0.25
+})
+
+
 // load a resource
 loader.load(
   // resource URL
-  "asset/SaMo_topo_8_color_scaled.obj",
+  "asset/TranslatedOBJ/SaMo_topo_33_translated.obj",
   // called when resource is loaded
   function (object) {
+    console.log(object)
+    // const mesh = new THREE.Mesh(object, material)
+    object.rotateX(-Math.PI / 2)
     scene.add(object);
   },
   // called when loading is in progresses
@@ -85,6 +101,7 @@ loader.load(
   },
   // called when loading has errors
   function (error) {
+    console.log(error.message)
     console.log("An error happened");
   }
 );
@@ -101,6 +118,9 @@ function onWindowResize() {
 // give stats
 const stats = new Stats();
 document.body.appendChild(stats.dom);
+
+document.body.appendChild( VRButton.createButton( renderer ) );
+renderer.xr.enabled = true;
 
 // animates everything every time
 function animate() {
