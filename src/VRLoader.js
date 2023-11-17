@@ -2,7 +2,7 @@ import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import Stats from "three/examples/jsm/libs/stats.module";
 import { OBJLoader } from "three/addons/loaders/OBJLoader.js";
-import "/src/style.css";
+import "../style.css";
 import { VRButton } from 'three/addons/webxr/VRButton.js';
 
 // import { PointCloudOctree, Potree } from "/three-loader";
@@ -85,7 +85,7 @@ const material = new THREE.MeshPhysicalMaterial({
 // load a resource
 loader.load(
   // resource URL
-  "/asset/TranslatedOBJ/SaMo_topo_33_translated.obj",
+  "./asset/TranslatedOBJ/SaMo_topo_33_translated.obj",
   // called when resource is loaded
   function (object) {
     console.log(object)
