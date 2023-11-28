@@ -15,5 +15,5 @@ export default {
       allow: ['.', '..', '../..', '/'],
     },
   },
-  base: "/"
+  base: "/dist"
 };

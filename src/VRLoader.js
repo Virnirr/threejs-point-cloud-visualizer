@@ -85,7 +85,7 @@ const material = new THREE.MeshPhysicalMaterial({
 // load a resource
 loader.load(
   // resource URL
-  "../SaMo_topo_14_downScaled.obj",
+  "/dist/SaMo_topo_14_downScaled.obj",
   // called when resource is loaded
   function (object) {
     console.log(object)
