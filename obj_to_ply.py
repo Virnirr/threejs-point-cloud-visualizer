@@ -37,8 +37,8 @@ def ply_to_obj_with_color(pcd, obj_file_path):
 
 def main():
 
-    las_file_path = "asset/Las/SaMo_topo_33.las"
-    obj_file_path = "asset/OBJ/SaMo_topo_33.obj"
+    las_file_path = "asset/Las/SaMo_topo_14.las"
+    obj_file_path = "asset/OBJ/SaMo_topo_14.obj"
 
     if not os.path.exists(las_file_path):
         print("File not found:", las_file_path)

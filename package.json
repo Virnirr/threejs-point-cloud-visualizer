@@ -9,10 +9,13 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "unplugin-obj": "^0.1.2",
     "vite": "^4.4.5"
   },
   "dependencies": {
+    "@vitejs/plugin-vue": "^4.5.0",
     "gsap": "^3.12.2",
-    "three": "^0.158.0"
+    "three": "^0.158.0",
+    "vite-plugin-raw": "^1.0.3"
   }
 }

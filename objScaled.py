@@ -28,8 +28,8 @@ def write_obj_file(vertices_df, file_name):
     print(f"File written: {file_name}")
 
 def main():
-    input_file_path = '/mnt/c/Users/ybinb/VS/lidar-processing/data/ind_scans/SaMo_topo_8_color.obj'
-    output_file_path = '/mnt/c/Users/ybinb/VS/lidar-processing/data/ind_scans/SaMo_topo_8_color_scaled.obj'
+    input_file_path = 'asset/OBJ/SaMo_topo_14.obj'
+    output_file_path = 'asset/OBJ/SaMo_topo_14_downScaled.obj'
     vertices = read_obj_file(input_file_path)
     adjusted_vertices_df = adjust_vertices(vertices)
     write_obj_file(adjusted_vertices_df, output_file_path)
